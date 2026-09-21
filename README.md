@@ -31,8 +31,3 @@ I am a student at Chernivtsi National University.
 \- Git
 
 \- GitHub
-
-\- HTML
-
-\- CSS
-
