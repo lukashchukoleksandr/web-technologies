@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Завдання 4 — Анкета</title>
+</head>
+<body>
+  <div style="width: 760px; max-width: 100%; margin: 0 auto; text-align: center;">
+    <h1>Анкета користувача</h1>
+
+    <form method="get" action="questionnaire.html" style="text-align: left;">
+      <fieldset>
+        <legend>Особисті дані</legend>
+
+        <p>
+          <label for="full-name">Ім'я та прізвище:</label><br>
+          <input id="full-name" type="text" name="full_name" value="" placeholder="Введіть ім'я та прізвище" required tabindex="1">
+        </p>
+
+        <p>
+          <label for="about">Коротко про себе:</label><br>
+          <textarea id="about" name="about" placeholder="Напишіть кілька речень" rows="5" cols="50" tabindex="2"></textarea>
+        </p>
+
+        <p>
+          <label for="password">Пароль:</label><br>
+          <input id="password" type="password" name="password" value="" placeholder="Рівно 6 символів" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[A-Za-z0-9]{6}" required tabindex="3">
+        </p>
+
+        <p>
+          <label for="email">Email:</label><br>
+          <input id="email" type="email" name="email" value="" placeholder="name@example.com" autocomplete="off" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" required tabindex="4">
+        </p>
+
+        <p>
+          <label for="tel">Мобільний номер:</label><br>
+          <input id="tel" type="tel" name="tel" value="" placeholder="+380XXXXXXXXX" pattern="\+380[0-9]{9}" required tabindex="5">
+        </p>
+
+        <p>
+          <label for="birth-date">Дата народження:</label><br>
+          <input id="birth-date" type="date" name="birth_date" value="" required tabindex="6">
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Навчання</legend>
+
+        <p>Форма навчання:</p>
+        <label><input type="radio" name="study_form" value="full_time" tabindex="7"> Денна</label><br>
+        <label><input type="radio" name="study_form" value="part_time" tabindex="8"> Заочна</label><br>
+        <label><input type="radio" name="study_form" value="distance" tabindex="9"> Дистанційна</label>
+
+        <p>Рівень володіння HTML:</p>
+        <label><input type="radio" name="html_level" value="beginner" tabindex="10"> Початковий</label><br>
+        <label><input type="radio" name="html_level" value="middle" checked tabindex="11"> Середній</label><br>
+        <label><input type="radio" name="html_level" value="advanced" tabindex="12"> Високий</label>
+
+        <p>Що вас цікавить:</p>
+        <label><input type="checkbox" name="interests" value="html" tabindex="13"> HTML</label><br>
+        <label><input type="checkbox" name="interests" value="css" tabindex="14"> CSS</label><br>
+        <label><input type="checkbox" name="interests" value="javascript" tabindex="15"> JavaScript</label><br>
+        <label><input type="checkbox" name="interests" value="git" tabindex="16"> Git</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Списки вибору</legend>
+
+        <p>
+          <label for="browser">Основний браузер:</label><br>
+          <select id="browser" name="browser" tabindex="17">
+            <option value="chrome">Google Chrome</option>
+            <option value="firefox">Mozilla Firefox</option>
+            <option value="edge" selected>Microsoft Edge</option>
+            <option value="opera">Opera</option>
+            <option value="safari">Safari</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="languages">Мови програмування (можна обрати декілька):</label><br>
+          <select id="languages" name="languages" multiple size="6" tabindex="18">
+            <option value="cpp">C++</option>
+            <option value="python">Python</option>
+            <option value="javascript">JavaScript</option>
+            <option value="java">Java</option>
+            <option value="csharp">C#</option>
+            <option value="php">PHP</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="technologies">Технології за групами:</label><br>
+          <select id="technologies" name="technologies" tabindex="19">
+            <optgroup label="Frontend">
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="js">JavaScript</option>
+            </optgroup>
+            <optgroup label="Backend">
+              <option value="node">Node.js</option>
+              <option value="php">PHP</option>
+              <option value="python_backend">Python</option>
+            </optgroup>
+            <optgroup label="Databases">
+              <option value="mysql">MySQL</option>
+              <option value="postgresql">PostgreSQL</option>
+              <option value="mongodb">MongoDB</option>
+            </optgroup>
+            <optgroup label="Tools">
+              <option value="git">Git</option>
+              <option value="github">GitHub</option>
+              <option value="vscode">VS Code</option>
+            </optgroup>
+          </select>
+        </p>
+
+        <p>
+          <label for="city">Місто:</label><br>
+          <input id="city" type="text" name="city" value="" list="cities" placeholder="Почніть вводити місто" tabindex="20">
+          <datalist id="cities">
+            <option value="Чернівці"></option>
+            <option value="Київ"></option>
+            <option value="Львів"></option>
+            <option value="Івано-Франківськ"></option>
+            <option value="Одеса"></option>
+          </datalist>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Відправлення анкети методом GET</legend>
+        <p>Після натискання Submit дані цієї форми будуть додані до URL поточної сторінки як параметри запиту.</p>
+        <button type="submit" name="action" value="send_get" tabindex="21">Submit (GET)</button>
+        <button type="reset" name="action" value="reset_get" tabindex="22">Reset</button>
+      </fieldset>
+    </form>
+
+    <form method="post" action="questionnaire.html" enctype="multipart/form-data" style="text-align: left; margin-top: 24px;">
+      <fieldset>
+        <legend>Завантаження аудіофайлів методом POST</legend>
+        <p>
+          <label for="audio-files">Оберіть один або декілька аудіофайлів:</label><br>
+          <input id="audio-files" type="file" name="audio_files" value="" accept="audio/*" multiple required tabindex="23">
+        </p>
+        <button type="submit" name="action" value="send_post" tabindex="24">Submit (POST)</button>
+        <button type="reset" name="action" value="reset_post" tabindex="25">Reset</button>
+      </fieldset>
+    </form>
+
+    <p><a href="../index.html">Повернутись на головну</a></p>
+  </div>
+</body>
+</html>
