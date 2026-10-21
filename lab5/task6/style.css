@@ -5,7 +5,7 @@ body {
     color: #17202a;
 
     background-color: #1b2a41;
-    background-image: url("img/page-bg.png");
+    background-image: url("img/page-bg.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -108,7 +108,7 @@ round підганяє (масштабує) картинки так, щоб у �
     box-sizing: border-box;
     border: 2px solid #315c76;
     background-color: #dbeaf3;
-    background-image: url("img/sample-bg.png");
+    background-image: url("img/sample-bg.webp");
     background-position: center;
     background-repeat: no-repeat;
 }
