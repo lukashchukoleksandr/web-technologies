@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+    color: #263238;
+    background-color: #e8f1f5;
+}
+
+.questionnaire {
+    width: 760px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: #ffffff;
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+    color: #23566f;
+}
+
+form {
+    margin-top: 24px;
+    text-align: left;
+}
+
+fieldset {
+    margin-bottom: 18px;
+    padding: 18px;
+    border: 2px solid #7aa6b8;
+    background-color: #f4f9fb;
+}
+
+legend {
+    padding: 0 10px;
+    color: #23566f;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+label {
+    color: #314e5d;
+    font-weight: 600;
+}
+
+input,
+textarea,
+select,
+button {
+    margin-top: 6px;
+    font: inherit;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select {
+    max-width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #8fb8c8;
+    background-color: #ffffff;
+    color: #263238;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #5c9db7;
+    background-color: #eefaff;
+}
+
+button {
+    padding: 9px 18px;
+    border: 0;
+    background-color: #397b96;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2b6178;
+}

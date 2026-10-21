@@ -1,0 +1,88 @@
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #f7f7f7;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+.box-row > div {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #222;
+    margin: 20px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #d9d9d9;
+}
+
+.content-box-demo {
+    box-sizing: content-box;
+    /* Загальна ширина: 300 + 2 * 20 + 2 * 5 = 350px */
+}
+
+.border-box-demo {
+    box-sizing: border-box;
+    /* Загальна ширина: 300px */
+}
+
+.overflow-row > div {
+    width: 280px;
+    max-height: 80px;
+    margin: 20px 20px 130px 0;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    border: 2px solid #444;
+    background-color: #fff;
+}
+
+.overflow-row > div:nth-child(1) {
+    overflow: visible;
+}
+
+.overflow-row > div:nth-child(2) {
+    overflow: hidden;
+}
+
+.overflow-row > div:nth-child(3) {
+    overflow: scroll;
+}
+
+.overflow-row > div:nth-child(4) {
+    overflow: auto;
+}
+
+.overflow-row p {
+    margin-bottom: 0;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #416b87;
+    color: white;
+    text-decoration: none;
+}
+
+/*
+display: none повністю прибирає елемент із потоку документа:
+місце під нього не зберігається. Це відрізняється, наприклад,
+від visibility: hidden, де елемент невидимий, але його місце зберігається.
+*/
+.menu li:nth-child(4) {
+    display: none;
+}

@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fc;
+}
+
+main {
+    white-space: nowrap;
+}
+
+main > div {
+    box-sizing: border-box;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    padding: 15px;
+    display: inline-block;
+    vertical-align: top;
+    color: #14395c;
+    font-size: 22px;
+    font-weight: 700;
+    white-space: normal;
+}
+
+/* 1. Діагональні смуги, лінійний градієнт 45deg, різка межа 50%. */
+main > div:nth-of-type(1) {
+    background-image: linear-gradient(
+        45deg,
+        #d7e9fb 50%,
+        #8abbe8 50%
+    );
+    background-size: 40px 40px;
+}
+
+/* 2. Клітинки з двох перпендикулярних лінійних градієнтів. */
+main > div:nth-of-type(2) {
+    background-color: #d7e9fb;
+    background-image:
+        linear-gradient(rgba(70, 132, 190, 0.35) 50%, transparent 50%),
+        linear-gradient(90deg, rgba(70, 132, 190, 0.35) 50%, transparent 50%);
+    background-size: 40px 40px;
+}
+
+/* 3. Радіальний circle, початок 30px 20px, farthest-corner, 3+ кольори. */
+main > div:nth-of-type(3) {
+    background-image: radial-gradient(
+        circle farthest-corner at 30px 20px,
+        #f2f8ff 0%,
+        #9dc8ee 42%,
+        #4b91cc 70%,
+        #1f5f96 100%
+    );
+}
+
+/* 4. Напівпрозорий градієнт поверх суцільного фону. */
+main > div:nth-of-type(4) {
+    background-color: #4b91cc;
+    background-image: linear-gradient(to top, rgba(8, 42, 72, 0.6), transparent);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 50%;
+    color: white;
+}

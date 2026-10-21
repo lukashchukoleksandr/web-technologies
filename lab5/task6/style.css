@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 35px 15px;
+    font-family: Arial, sans-serif;
+    color: #17202a;
+
+    background-color: #1b2a41;
+    background-image: url("img/page-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    box-sizing: border-box;
+    max-width: 900px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.88);
+
+    /*
+    Якщо вікно браузера стане вужчим за 320px, контейнер не стане
+    вужчим за min-width: 320px. Через це може з'явитися горизонтальна
+    прокрутка сторінки.
+    */
+}
+
+section {
+    margin: 35px 0;
+}
+
+h1,
+h2 {
+    color: #244c67;
+}
+
+/* П'ять div перетворені на рядкові елементи. */
+.inline-tags > div {
+    display: inline;
+    width: 200px;
+    height: 100px;
+    padding: 6px;
+    background-color: #b7d2e3;
+
+    /*
+    width і height не діють, тому що display: inline робить div
+    рядковим елементом, а для звичайних inline-елементів ці розміри
+    не визначають коробку так, як для block / inline-block.
+    */
+}
+
+/* П'ять span перетворені на блокові елементи. */
+.block-tags {
+    margin-top: 20px;
+}
+
+.block-tags > span {
+    display: block;
+    width: 150px;
+    margin-bottom: 6px;
+    padding: 7px 10px;
+    background-color: #88b5d0;
+}
+
+.repeat-grid > div {
+    box-sizing: border-box;
+    height: 200px;
+    margin-bottom: 18px;
+    padding: 10px;
+    border: 2px solid #315c76;
+    background-color: #eaf4fa;
+    background-image: url("img/tile.png");
+    background-size: 60px 60px;
+}
+
+.repeat-grid > div:nth-child(1) {
+    background-repeat: repeat-x;
+}
+
+.repeat-grid > div:nth-child(2) {
+    background-repeat: repeat-y;
+}
+
+.repeat-grid > div:nth-child(3) {
+    background-repeat: space;
+}
+
+.repeat-grid > div:nth-child(4) {
+    background-repeat: round;
+}
+
+/*
+space повторює цілу картинку без масштабування та розподіляє
+вільний простір між копіями.
+round підганяє (масштабує) картинки так, щоб у блоці вмістилася
+ціла кількість повторів без залишку.
+*/
+
+.size-row > div {
+    width: 300px;
+    height: 200px;
+    margin: 15px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    border: 2px solid #315c76;
+    background-color: #dbeaf3;
+    background-image: url("img/sample-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.size-row > div:nth-child(1) {
+    background-size: contain;
+}
+
+.size-row > div:nth-child(2) {
+    background-size: cover;
+}
+
+.attachment-row > div {
+    box-sizing: border-box;
+    width: 45%;
+    max-height: 150px;
+    margin-right: 3%;
+    padding: 12px;
+    display: inline-block;
+    vertical-align: top;
+    overflow: auto;
+    border: 2px solid #315c76;
+
+    background-color: rgba(255, 255, 255, 0.7);
+    background-image: url("img/sample-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.attachment-row > div:nth-child(1) {
+    background-attachment: scroll;
+}
+
+.attachment-row > div:nth-child(2) {
+    background-attachment: local;
+}
+
+/*
+scroll: фон прив'язаний до самого елемента і при прокручуванні
+вмісту всередині блока не рухається разом із цим вмістом.
+
+local: фон прокручується разом із внутрішнім вмістом елемента.
+*/
