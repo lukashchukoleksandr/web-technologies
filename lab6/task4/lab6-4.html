@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторна 6 — Завдання 4</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="topbar" aria-label="Горизонтальна навігація">
+    <ul class="top-menu">
+      <li class="top-item active"><a href="#home" aria-label="Головна"><span class="material-symbols-outlined">home</span></a></li>
+      <li class="top-item has-sub"><a href="#work" aria-label="Робота"><span class="material-symbols-outlined">work</span></a><ul class="dropdown"><li><a href="#projects">Проєкти</a></li><li><a href="#tasks">Завдання</a></li></ul></li>
+      <li class="top-item has-sub"><a href="#files" aria-label="Файли"><span class="material-symbols-outlined">folder</span></a><ul class="dropdown"><li><a href="#docs">Документи</a></li><li><a href="#media">Медіа</a></li></ul></li>
+      <li class="top-item"><a href="#mail" aria-label="Пошта"><span class="material-symbols-outlined">mail</span></a></li>
+      <li class="top-item top-end"><a href="#account" aria-label="Акаунт"><span class="material-symbols-outlined">account_circle</span></a></li>
+    </ul>
+  </nav>
+
+  <nav class="stickybar" aria-label="Липка навігація"><a href="#home">Головна</a><a href="#work">Робота</a><a href="#contacts">Контакти</a></nav>
+
+  <aside class="sidebar" aria-label="Вертикальна навігація">
+    <ul class="side-menu">
+      <li class="side-item active"><a href="#home"><span class="material-symbols-outlined">dashboard</span><span>Головна</span></a></li>
+      <li class="side-item has-sub"><a href="#services"><span class="material-symbols-outlined">apps</span><span>Сервіси</span></a>
+        <ul class="side-sub"><li><a href="#cloud">Хмара</a></li><li class="has-sub"><a href="#office">Офіс</a><ul class="side-sub level-3"><li><a href="#docs">Документи</a></li><li><a href="#sheets">Таблиці</a></li></ul></li></ul>
+      </li>
+      <li class="side-item has-sub"><a href="#messages"><span class="material-symbols-outlined">chat</span><span>Повідомлення</span></a><ul class="side-sub"><li><a href="#inbox">Вхідні</a></li><li><a href="#archive">Архів</a></li></ul></li>
+      <li class="side-item"><a href="#settings"><span class="material-symbols-outlined">settings</span><span>Налаштування</span></a></li>
+    </ul>
+  </aside>
+
+  <main class="content" id="home">
+    <section class="hero"><h1>CSS позиціонування</h1><p>Прокрутіть сторінку, щоб побачити fixed та sticky навігацію. Наведіть на пункти з підменю.</p></section>
+    <section id="work"><h2>Приклад контенту</h2><p>Горизонтальна панель зафіксована зверху, вертикальна — на всю висоту екрана, а друга горизонтальна панель працює як sticky.</p></section>
+    <section><h2>Три рівні вкладеності</h2><p>У вертикальному меню: Сервіси → Офіс → Документи/Таблиці.</p></section>
+    <section id="contacts"><h2>Контакти</h2><p>Демонстраційний блок для прокручування.</p></section>
+  </main>
+</body>
+</html>

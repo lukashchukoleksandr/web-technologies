@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Arial, sans-serif; color: #24333d; background: #f4f7f9; }
+ul { margin: 0; padding: 0; list-style: none; } a { color: inherit; text-decoration: none; }
+.topbar { position: fixed; top: 0; left: 0; right: 0; height: 58px; z-index: 20; background: #263238; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
+.top-menu { height: 100%; }
+.top-item { position: relative; float: left; height: 100%; }
+.top-item > a { display: flex; width: 64px; height: 58px; align-items: center; justify-content: center; color: #d9e1e5; }
+.top-item:hover > a, .top-item.active > a { color: #fff; background: #00a77d; }
+.top-end { float: right; }
+.dropdown { position: absolute; top: 58px; left: 0; min-width: 170px; visibility: hidden; opacity: 0; transform: translateY(8px); background: #fff; box-shadow: 0 8px 22px rgba(0,0,0,.2); transition: .2s; }
+.has-sub:hover > .dropdown { visibility: visible; opacity: 1; transform: translateY(0); }
+.dropdown a { display: block; padding: 12px 16px; } .dropdown a:hover { color: #fff; background: #00a77d; }
+.stickybar { position: sticky; top: 58px; z-index: 15; margin-top: 58px; padding: 10px 260px; background: #e2e9ed; border-bottom: 1px solid #c8d2d8; }
+.stickybar a { display: inline-block; margin-right: 22px; padding: 6px 0; } .stickybar a:hover { color: #00a77d; }
+.sidebar { position: fixed; top: 58px; bottom: 0; left: 0; width: 230px; z-index: 12; padding-top: 44px; background: #34434d; color: #fff; }
+.side-item { position: relative; }
+.side-item > a { display: flex; gap: 12px; align-items: center; padding: 14px 18px; }
+.side-item:hover > a, .side-item.active > a { background: #00a77d; }
+.side-sub { position: absolute; top: 0; left: 100%; width: 190px; visibility: hidden; opacity: 0; background: #42545f; box-shadow: 5px 5px 16px rgba(0,0,0,.18); transition: .2s; }
+.side-item:hover > .side-sub, .side-sub .has-sub:hover > .side-sub { visibility: visible; opacity: 1; }
+.side-sub li { position: relative; }
+.side-sub a { display: block; padding: 13px 16px; } .side-sub a:hover { background: #00a77d; }
+.level-3 { top: 0; left: 100%; }
+.content { margin-left: 230px; padding: 34px; }
+.content section { min-height: 520px; padding: 45px; margin-bottom: 28px; background: white; box-shadow: 0 4px 16px rgba(0,0,0,.07); }
+.hero { background: linear-gradient(135deg,#fff,#dff4ef) !important; }
+@media (max-width: 760px) { .sidebar { width: 70px; } .side-item > a span:last-child { display:none; } .content { margin-left:70px; } .stickybar { padding-left:90px; } }

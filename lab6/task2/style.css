@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+.hover-stage {
+  position: relative;
+  width: 630px;
+  height: 220px;
+  margin: 0 auto;
+}
+
+.hover-block {
+  position: absolute;
+  border: 3px solid #222;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+  line-height: 1.55;
+  transition: opacity .2s ease;
+}
+
+.block-1 {
+  left: 0;
+  top: 0;
+  width: 190px;
+  height: 60px;
+  align-items: center;
+  background: #00b84f;
+  color: #111;
+}
+
+.block-2 {
+  left: 212px;
+  top: 0;
+  width: 190px;
+  height: 218px;
+  padding-top: 8px;
+  align-items: flex-start;
+  background: #568fd2;
+  color: #fff;
+  opacity: 0;
+}
+
+.block-3 {
+  right: 0;
+  top: 0;
+  width: 190px;
+  height: 218px;
+  padding-top: 8px;
+  align-items: flex-start;
+  background: #654d80;
+  color: #fff;
+  opacity: 0;
+}
+
+/* Варіант 1: Блок 1 -> Блок 2 -> Блок 3 */
+.block-1:hover + .block-2,
+.block-2:hover {
+  opacity: 1;
+}
+
+.block-2:hover + .block-3,
+.block-3:hover {
+  opacity: 1;
+}
+
+.hint {
+  margin: 12px auto 0;
+  text-align: center;
+  color: #555;
+}
