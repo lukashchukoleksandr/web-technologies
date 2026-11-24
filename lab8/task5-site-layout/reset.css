@@ -1,0 +1,9 @@
+*,
+*::before,
+*::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { min-height: 100vh; }
+img { max-width: 100%; display: block; }
+button, input, textarea, select { font: inherit; }
+a { color: inherit; }
+ul, ol { list-style: none; margin: 0; padding: 0; }
