@@ -27,4 +27,5 @@ h1 { margin-bottom: 8px; font: 700 26px Arial, sans-serif; }
   .card--featured { grid-column: auto; }
   .card > img, .card--featured > img { height: 220px; }
   .card__body { max-height: 460px; overflow-y: auto; }
+  
 }
