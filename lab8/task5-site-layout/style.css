@@ -8,9 +8,9 @@ h1 { margin-bottom: 8px; font-size: 24px; }
 .layout { display: grid; gap: var(--gap); grid-template-columns: 1fr; }
 .layout__item { border: var(--border); border-radius: 4px; padding: 12px; background: #fff; box-shadow: 0 2px 3px rgb(0 0 0 / 12%); }
 .layout__item--main { min-height: 260px; }
-/* 1. Explicit line placement: column tracks and row tracks. */
+
 .layout--tracks { grid-template-rows: 50px 50px 260px 50px 50px 50px; }
-/* 2. Named areas give the same mobile arrangement. */
+
 .layout--areas { grid-template-areas: 'header' 'navigation' 'main' 'sidebar' 'ads' 'footer'; grid-template-rows: 50px 50px 260px 50px 50px 50px; }
 .layout--areas .layout__item--header { grid-area: header; }
 .layout--areas .layout__item--navigation { grid-area: navigation; }
@@ -51,7 +51,7 @@ h1 { margin-bottom: 8px; font-size: 24px; }
 }
 
 
-/* Start page for selecting one of the two required implementations. */
+
 .intro {
   max-width: 760px;
   margin: 12px 0 24px;
