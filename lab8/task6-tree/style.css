@@ -1,23 +1,87 @@
-:root { --yellow: #ffdc47; --gap: 10px; --max-page: 1550px; }
-body { background: white; font-family: Georgia, serif; }
-.page { max-width: var(--max-page); margin: auto; padding: 12px; }
-h1 { font: 26px Arial, sans-serif; margin-bottom: 6px; }
-.subtitle { font: 14px Arial, sans-serif; color: #666; margin-bottom: 22px; }
-.tree-scroll { overflow-x: auto; }
-.tree { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--gap); counter-reset: tile; min-width: 700px; height: min(74vh, 680px); }
-.tree__column { display: grid; gap: var(--gap); min-width: 0; }
-.tree__column--1 { grid-template-rows: 1fr; }
-.tree__column--2 { grid-template-rows: repeat(2, 1fr); }
-.tree__column--3 { grid-template-rows: repeat(3, 1fr); }
-.tree__column--4 { grid-template-rows: repeat(4, 1fr); }
-.tree__column--6 { grid-template-rows: repeat(6, 1fr); }
-.tree__column--12 { grid-template-rows: repeat(12, 1fr); }
-.tree__cell { display: grid; place-items: center; min-height: 0; background: var(--yellow); color: #fff; counter-increment: tile; }
-.tree__cell::before { content: counter(tile); font-size: clamp(12px, 1.7vw, 28px); }
-@media (max-width: 768px) {
-  .page { padding: 10px; }
-  .tree { min-width: 700px; height: 540px; }
+:root {
+    --yellow: #ffdc47;
+    --gap: 10px;
 }
+
+body {
+    font-family: Georgia, serif;
+}
+
+.page {
+    max-width: 1550px;
+    margin: auto;
+    padding: 12px;
+}
+
+h1,
+.subtitle {
+    margin-bottom: 12px;
+}
+
+.tree-scroll {
+    overflow-x: auto;
+}
+
+.tree {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--gap);
+    min-width: 700px;
+    height: 650px;
+    counter-reset: tile;
+}
+
+.tree__column {
+    display: grid;
+    gap: var(--gap);
+    min-width: 0;
+}
+
+.tree__column--1 {
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.tree__column--2 {
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.tree__column--3 {
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.tree__column--4 {
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.tree__column--6 {
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.tree__column--12 {
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.tree__cell {
+    display: grid;
+    place-items: center;
+    background: var(--yellow);
+    color: white;
+    counter-increment: tile;
+}
+
+.tree__cell::before {
+    content: counter(tile);
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    .tree {
+        height: 550px;
+    }
+}
+
 @media (max-width: 576px) {
-  .tree { min-width: 620px; height: 490px; }
+    .tree {
+        height: 490px;
+    }
 }
